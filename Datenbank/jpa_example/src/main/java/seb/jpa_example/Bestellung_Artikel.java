@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +18,12 @@ public class Bestellung_Artikel {
 	private long id;
 	@Setter
 	@Getter
-	private int Artikel_id;
+	@ManyToOne
+	private Bestellung_v3 Bestellung;
+	@Setter
+	@Getter
+	@ManyToOne
+	private Artikel Artikel;
 	@Setter
 	@Getter
 	private int Menge;
@@ -27,9 +33,48 @@ public class Bestellung_Artikel {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Bestellung_Artikel(int artikel_id, int menge) {
+	public Bestellung_Artikel(Bestellung_v3 bestellung, Artikel artikel, int menge) {
 		super();
-		Artikel_id = artikel_id;
+		Bestellung = bestellung;
+		Artikel = artikel;
+		Menge = menge;
+	}
+
+	@Override
+	public String toString() {
+		return "Bestellung_Artikel [id=" + id + ",\n Bestellung=" + Bestellung + ",\n Artikel=" + Artikel + ",\n Menge="
+				+ Menge + "]\n";
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public Bestellung_v3 getBestellung() {
+		return Bestellung;
+	}
+
+	public void setBestellung(Bestellung_v3 bestellung) {
+		Bestellung = bestellung;
+	}
+
+	public Artikel getArtikel() {
+		return Artikel;
+	}
+
+	public void setArtikel(Artikel artikel) {
+		Artikel = artikel;
+	}
+
+	public int getMenge() {
+		return Menge;
+	}
+
+	public void setMenge(int menge) {
 		Menge = menge;
 	}
 	

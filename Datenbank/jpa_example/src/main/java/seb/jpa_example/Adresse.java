@@ -41,4 +41,51 @@ public class Adresse {
 		Hnr = hnr;
 	}
 
+	@Override
+	public String toString() {
+		return "Adresse [id=" + id + ",\n Stadt=" + Stadt + ",\n Strasse=" + Strasse + ",\n PLZ=" + PLZ + ",\n Hnr=" + Hnr
+				+ "]\n";
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getStadt() {
+		return Stadt;
+	}
+
+	public void setStadt(String stadt) {
+		Stadt = stadt;
+	}
+
+	public String getStrasse() {
+		return Strasse;
+	}
+
+	public void setStrasse(String strasse) {
+		Strasse = strasse;
+	}
+
+	public int getPLZ() {
+		return PLZ;
+	}
+
+	public void setPLZ(int pLZ) {
+		PLZ = pLZ;
+	}
+
+	public int getHnr() {
+		return Hnr;
+	}
+
+	public void setHnr(int hnr) {
+		Hnr = hnr;
+	}
+	
+	
 }

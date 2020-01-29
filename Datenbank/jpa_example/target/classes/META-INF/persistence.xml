@@ -8,6 +8,11 @@
 		transaction-type="RESOURCE_LOCAL">
 		<class>seb.jpa_example.Person</class>
 		<class>seb.jpa_example.Hobby</class>
+		<class>seb.jpa_example.Bestellung_Artikel</class>
+		<class>seb.jpa_example.Bestellung_v3</class>
+		<class>seb.jpa_example.Kunde</class>
+		<class>seb.jpa_example.Adresse</class>
+		<class>seb.jpa_example.Artikel</class>
 
 		<properties>
 			<property name="eclipselink.jdbc.batch-writing" value="JDBC" />
