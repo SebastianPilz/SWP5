@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context>
+	<Resource
+		name = "jdbc/web"
+		
+		auth = "Container"
+		type = "javax.sql.DataSource"
+		
+		maxActive = "10"
+		maxIdle = "4"
+		
+		username = "root"
+		password = "root"
+		driverClassName = "com.mysql.jdbc.Driver"
+		url = "jdbc:mysql://127.0.0.1:3306/INFI5?characterEncoding=latin1"
+	/>
+</context>
